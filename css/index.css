@@ -1,0 +1,523 @@
+/*中间分类*/
+.grid{
+    height: 480px;
+}
+.grid-col1{
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    color: #fff;
+    font-size: 14px;    /*不是给字的，是给/的*/
+    position: relative;
+}
+.ad{
+    width: 250px;
+    height: 480px;
+    /* background-color: pink; */
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+.ad-r{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+    width: 0;
+    height: 480px;
+    background: url("../images/ad-r.png");
+    /*这个图片有动画，给它加过渡*/
+    transition: all 0.8s;
+}
+.ad:hover .ad-r{    /*鼠标经过广告ad大盒子时，里面的ad-r的图片宽度恢复*/
+    width: 990px;
+}
+.grid-col1 a{
+    color: #fff;
+    font-size: 16px;    /*是给链接文字的*/
+    margin: 0 3px;
+}
+.grid-col1 ul{
+    padding: 10px 0;
+}
+.grid-col1 ul li{
+    padding-left: 12px;
+    height: 29px;
+    line-height: 26px;
+}
+.grid-col1 ul li:hover{
+    background-color: #9c9698;
+}
+.grid-col1 a:hover{
+    color: #f10215;
+}
+
+.grid-col2{
+    width: 790px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+/* banner部分 */
+.grid-col2-b div{
+    float: left;
+    margin-top: 10px;
+}
+.grid-col2-b div:last-child{
+    float: right;
+    margin-top: 10px;
+}
+
+/* 箭头部分 */
+.grid-col2-t{
+    position: relative;
+    width: 790px;
+    height: 340px;
+    margin: 0px auto;
+}
+.grid-col2-t ul li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.grid-col2-t ul li:first-child {
+    
+    display: block;
+}
+
+/* .arrow-l,
+.arrow-r{
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background: gray;
+    background:rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: arial;
+    font-weight: normal;
+}
+.arrow-r{
+    right: 0;
+} */
+.arrow>a {
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0,0,0,.4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: '宋体';
+    text-decoration: none;
+    color: #fff;
+}
+
+.arrow {
+    opacity: .4;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow>.arrow-l {
+    left: 0;
+}
+
+.arrow>.arrow-r {
+    right: 0;
+}
+
+.circle{
+    width: 200px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    border-radius: 10px;
+    padding-left: 8px;
+}
+
+ol {
+    position: absolute;
+    bottom: 10px;
+    left: 12%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 0 5px;
+}
+
+ol li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,.4);
+    float: left;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.now {
+    border: 1px solid rgba(0,0,0,0);
+    background: rgba(255,0,0,.7);
+    box-shadow: 0 0 0 4px rgba(0,0,0,.3);
+}
+
+
+.grid-col3{
+    width: 190px;
+    height: 100%;
+}
+.you{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 480px;
+}
+
+/*右边模块*/
+.login{
+    height: 85px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+}
+.login-t{
+    width: 95px;
+    height: 60px;
+    line-height: 20px;
+    font-size: 12px;
+    white-space: nowrap;    /*强制一行内显示*/
+    overflow: hidden;       /*溢出隐藏*/
+    text-overflow: ellipsis;/*超出部分显示省略号*/
+    color: #666;
+    padding-left: 60px;
+    position: relative;
+}
+.login-t a{
+    color: #666;
+}
+.login-t a:hover{
+    color: #f10512;
+}
+.user-info{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../images/sprite_userinfo.png") no-repeat -68px 1px;
+}
+.user-info img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.login-b a{
+    display:inline-block;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #f10215;
+    margin-right: 3px;
+    text-align: center;
+    line-height: 20px;
+    color: #f10215;
+}
+.login-b a:hover{
+    background-color: #f10215;
+    color: #fff;
+}
+.news{
+    height: 154px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.news-t{
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.news-t a{
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    color: #666;
+}
+.cuxiao{
+    width: 38px;
+    border-right: 1px solid #ccc;
+}
+.gg{
+    margin-left: 15px;
+}
+.news-t .more{
+    float: right;
+}
+.news-t div{
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.news-b{
+    padding-top: 20px;
+    position: absolute;
+    display: none;
+}
+.activeNew{
+    display: block;
+}
+.news-b a{
+    color: #666;
+}
+.news-b a:hover{
+    color: #f10215;
+}
+.news-b li{
+    height: 23px;
+    line-height: 23px;
+}
+
+
+.expand{
+    height: 209px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.expand ul{
+    width: 195px; /*父亲是190，但是里面的li的宽度超过了190，摆放不开4个li，让ul宽度变大*/
+}
+.expand li{
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+.expand li a{
+    display: block;
+    padding-top: 15px;
+    text-align: center;
+}
+.expand li i{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: url("../images/sprite_fs.png") no-repeat;
+}
+.expand li:first-child i{
+    width: 18px;
+    height: 23px;
+    background-position: -5px -88px;
+}
+.expand li:nth-child(2) i{
+    width: 18px;
+    height: 23px;
+    background-position: -2px -45px;
+}
+.expand li:nth-child(3) i{
+    width: 18px;
+    height: 23px;
+    background-position: -47px -89px;
+}
+.expand li:nth-child(4) i{
+    width: 25px;
+    height: 23px;
+    background-position: -88px -5px;
+}
+.expand li:nth-child(5) i{
+    width: 25px;
+    height: 19px;
+    background-position: -88px -45px;
+}
+.expand li:nth-child(6) i{
+    width: 25px;
+    height: 19px;
+    background-position: 0px -2px;
+}
+.expand li:nth-child(7) i{
+    width: 25px;
+    height: 19px;
+    background-position: -42px -48px;
+}
+.expand li:nth-child(8) i{
+    width: 25px;
+    height: 19px;
+    background-position: -90px -88px;
+}
+.expand li:nth-child(9) i{
+    width: 25px;
+    height: 19px;
+    background-position: -131px 0px;
+}
+.expand li:nth-child(10) i{
+    width: 25px;
+    height: 19px;
+    background-position: -131px -45px;
+}
+.expand li:nth-child(11) i{
+    width: 25px;
+    height: 19px;
+    background-position: -131px -90px;
+}
+.expand li:nth-child(12) i{
+    width: 25px;
+    height: 19px;
+    background-position: -2px -89px;
+}
+
+.xuanfu{
+    width: 40px;
+    height: 286px;
+    right: 0;
+    position: fixed;
+    /* background-color: pink; */
+    z-index: 999;
+}
+.xuanfu li{
+    border-bottom: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    background-color: #7a6e6e;
+    border-radius: 5px;
+}
+.xuanfu li a{
+    display: block;
+}
+.xuanfu li a:hover{
+    background-color: #f10215;
+}
+.xuanfu li i{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    background: url("../images/right.png") no-repeat;
+}
+.xuanfu li:nth-child(1) i{
+    background-position: 0px 0px;
+}
+.xuanfu li:nth-child(2) i{
+    background-position: 0px -40px;
+}
+.xuanfu li:nth-child(3) i{
+    background-position: 0px -80px;
+}
+.xuanfu li:nth-child(4) i{
+    background-position: 0px -122px;
+}
+.xuanfu li:nth-child(5) i{
+    background-position: 0px -165px;
+}
+.xuanfu li:nth-child(6) i{
+    background-position: 0px -205px;
+}
+.xuanfu li:nth-child(7) i{
+    background-position: 0px -245px;
+}
+.xuanfu div{
+    width: 0;
+    height: 40px;
+    background-color: #f10215;
+    position:absolute;
+    right: 40px;
+    overflow: hidden;
+    transition: all 0.8s;
+    color: #fff;
+    white-space: nowrap;    /*强制一行内显示*/
+    overflow: hidden;       /*溢出隐藏*/
+    text-align: center;
+    line-height: 40px;
+    border-radius:2px; 
+}
+.xuanfu li:hover div{
+    width: 60px;
+}
+
+/*隐藏的类*/
+.none{
+    display: none;
+}
+
+.grid-col1 li.active{
+    background: #999395;
+}
+.grid-col1 li span:hover{
+    color: #c81623;
+}
+
+/*二级菜单*/
+#sub{
+    width:800px;
+    position: absolute;
+    border:1px solid #f7f7f7;
+    background:#f7f7f7;
+    box-shadow:2px 0 rgba(0,0,0,.3);
+    left: 190px;
+    top:0;
+    box-sizing:border-box;
+    margin: 0px;
+    padding:10px;
+    z-index: 999;
+}
+
+.sub-content a{
+    font-style:12px;
+    color:#666;
+    text-decoration:none;
+}
+
+.sub-content dd a{
+    border-left:1px solid #e0e0e0;
+    padding:0 1px;
+    margin:4px 0;
+    padding-left: 5px;
+}
+
+.sub-content dl {
+    overflow:hidden;
+}
+
+.sub-content dt{
+    float: left;
+    width:80px;
+    font-weight: bold;
+    clear:left;
+    position:relative;
+    height: 30px;
+}
+
+.sub-content dd {
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+    border-top:1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.sub-content dt i{
+    width:4px;
+    height: 14px;
+    font:400 9px/14px consolas;
+    position: absolute;
+    right:5px;
+    top:5px;
+}
